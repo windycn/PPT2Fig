@@ -1,0 +1,75 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+  <ribbon>
+    <tabs>
+      <tab id="PPT2FigTab" label="PPT2Fig">
+        <group id="PPT2FigScopeGroup" label="导出范围">
+          <splitButton id="PPT2FigExportSplit" size="large">
+            <button id="PPT2FigCurrent" label="当前页" image="PPT2FigScopeIcon" onAction="PPT2FigRibbonExport" />
+            <menu id="PPT2FigScopeMenu" label="选择范围">
+              <button id="PPT2FigSelected" label="已选页" onAction="PPT2FigRibbonExport" />
+              <button id="PPT2FigRange" label="指定页码…" onAction="PPT2FigRibbonExport" />
+              <button id="PPT2FigAll" label="全部页面" onAction="PPT2FigRibbonExport" />
+              <menuSeparator id="PPT2FigScopeSep" />
+              <button id="PPT2FigShapes" label="选中元素或组合" onAction="PPT2FigRibbonExport" />
+            </menu>
+          </splitButton>
+          <button id="PPT2FigQuickSelected" label="已选页" size="large" image="PPT2FigSelectedIcon" onAction="PPT2FigRibbonExport" />
+          <button id="PPT2FigQuickShapes" label="选中元素" size="large" image="PPT2FigShapesIcon" onAction="PPT2FigRibbonExport" />
+          <button id="PPT2FigQuickAll" label="全部页" size="large" image="PPT2FigAllIcon" onAction="PPT2FigRibbonExport" />
+        </group>
+        <group id="PPT2FigImageGroup" label="图片格式">
+          <menu id="PPT2FigPNGMenu" label="PNG" size="large" image="PPT2FigPNGIcon">
+            <button id="PPT2FigPNG150" label="150 DPI · 预览" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigPNG300" label="300 DPI · 常用" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigPNG600" label="600 DPI · 高清" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigPNG1200" label="1200 DPI · 超高清" onAction="PPT2FigRibbonExport" />
+            <menuSeparator id="PPT2FigPNGSep" />
+            <button id="PPT2FigPNGCustom" label="自定义 DPI / 像素…" onAction="PPT2FigRibbonExport" />
+          </menu>
+          <menu id="PPT2FigJPGMenu" label="JPG" size="large" image="PPT2FigJPGIcon">
+            <button id="PPT2FigJPG150" label="150 DPI · 预览" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigJPG300" label="300 DPI · 常用" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigJPG600" label="600 DPI · 高清" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigJPG1200" label="1200 DPI · 超高清" onAction="PPT2FigRibbonExport" />
+            <menuSeparator id="PPT2FigJPGSep" />
+            <button id="PPT2FigJPGCustom" label="自定义 DPI / 像素…" onAction="PPT2FigRibbonExport" />
+          </menu>
+          <menu id="PPT2FigTIFFMenu" label="TIFF" size="large" image="PPT2FigTIFFIcon">
+            <button id="PPT2FigTIFF150" label="150 DPI · 预览" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigTIFF300" label="300 DPI · 常用" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigTIFF600" label="600 DPI · 高清" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigTIFF1200" label="1200 DPI · 超高清" onAction="PPT2FigRibbonExport" />
+            <menuSeparator id="PPT2FigTIFFSep" />
+            <button id="PPT2FigTIFFCustom" label="自定义 DPI / 像素…" onAction="PPT2FigRibbonExport" />
+          </menu>
+        </group>
+        <group id="PPT2FigDocumentGroup" label="PDF 与 EPS">
+          <menu id="PPT2FigPDFMenu" label="PDF" size="large" image="PPT2FigPDFIcon">
+            <menu id="PPT2FigPDFVectorMenu" label="原生矢量 · 无 DPI 上限">
+              <button id="PPT2FigPDFVector" label="多页合并" onAction="PPT2FigRibbonExport" />
+              <button id="PPT2FigPDFSeparate" label="每页一个文件" onAction="PPT2FigRibbonExport" />
+            </menu>
+            <menu id="PPT2FigPDFRasterMenu" label="整页栅格化">
+              <button id="PPT2FigPDFRaster300" label="300 DPI" onAction="PPT2FigRibbonExport" />
+              <button id="PPT2FigPDFRaster600" label="600 DPI" onAction="PPT2FigRibbonExport" />
+              <button id="PPT2FigPDFRaster1200" label="1200 DPI" onAction="PPT2FigRibbonExport" />
+              <button id="PPT2FigPDFRaster2400" label="2400 DPI · 小尺寸页面" onAction="PPT2FigRibbonExport" />
+              <button id="PPT2FigPDFRasterCustom" label="自定义 DPI…" onAction="PPT2FigRibbonExport" />
+            </menu>
+          </menu>
+          <menu id="PPT2FigEPSMenu" label="EPS" size="large" image="PPT2FigEPSIcon">
+            <button id="PPT2FigEPS300" label="效果栅格化 · 300 DPI" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigEPS600" label="效果栅格化 · 600 DPI" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigEPS1200" label="效果栅格化 · 1200 DPI" onAction="PPT2FigRibbonExport" />
+            <button id="PPT2FigEPS2400" label="效果栅格化 · 2400 DPI" onAction="PPT2FigRibbonExport" />
+            <menuSeparator id="PPT2FigEPSSep" />
+            <button id="PPT2FigEPSCustom" label="自定义 DPI…" onAction="PPT2FigRibbonExport" />
+          </menu>
+        </group>
+        <group id="PPT2FigSettingsGroup" label="参数">
+          <button id="PPT2FigSettings" label="详细设置" size="large" image="PPT2FigSettingsIcon" onAction="PPT2FigRibbonExport" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
